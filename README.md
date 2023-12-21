@@ -17,8 +17,7 @@ Crying is an inevitable character throughout the growth of infants, with conditi
 -
 
 ## Technologies
-* Computer vision
-* Deep learning
+* Machine learning
 * time-series analysis
 
 ## Requirements
