@@ -1,4 +1,4 @@
-# Infant crying interpretation based on deep learning
+# Machine Learning-based Infant Crying Interpretation
 
 ## Table of contents
 * [Introduction](#introduction)
@@ -8,10 +8,9 @@
 * [Results](#results)
 
 ## Introduction
-Crying is the natural way for infants to communicate with the world. The ability to interpret an infant’s cry and their need, especially for inexperienced parents helps understand physical, emotional, and developmental health. Its application extends to diagnoses of diseases like deafness, autism, and others. Training humans to percept infants’ cries is a difficult and long-term process, and still not that effective. Infant cry classification based on deep learning is a state-of-the-art, inexpensive, and more accurate approach than human perception. This study aims to build an accurate deep-learning model for infant cry classification. The used data is Donate Cry Corpus dataset of five classes: hungry, tired, burping, belly pain, and discomfort. Data augmentation techniques were applied to increase the data of all classes except hungry. We used Mel-spectrogram images and Time series imagining (TSI) algorithm outputs as features of our built model. Many experiments based on different image sizes for different TSI were conducted. A 30 Mel-frequency Cepstral coefficients (MFCCs) feature was generated and supplied to TSI algorithms. Using the Mel Spectrogram feature achieved 92.86% while using TSI achieved an accuracy of 71.43, 100, 49.23, 84.44, and 100% for Gramian Angular Summation Fields (GASF), Gramian Angular Difference Fields (GADF), Markov Transition Fields (MTF), Recurrence plots (RP), and RGB GAF respectively. The results show that, for different image sizes, using RGB GAF based on features achieved an accuracy of 100% on testing data. The paper is <a href="" target=
+Crying is an inevitable character throughout the growth of infants, with conditions such as parents around them being understandable or the opposite being the case. This cry can be treated as an audio signal that carries a message about the infant’s feelings. The primary infant caregiver requires traditional ways of understanding these feelings. These feelings can be discomfort, hunger, sickness, etc. Failing to understand them correctly can cause a severe
+problem. Many solutions are attempting to solve this problem using different methods; however, due to the lack of proper audio feature representation and  classifier used, the achieved result requires further improvement. In this research, time-, frequency-, and time-frequency-domain feature representations are used to gain in-depth information about the audio signal. Time-domain features include Zero-crossing rate (ZCR), Root Mean Square (RMS), frequency-domain features include Mel-spectrogram and time-frequency-domain features include Mel-frequency Cepstral coefficients (MFCCs). Moreover, Time series imagining (TSI) algorithms are applied to transform 20-Mel-frequency Cepstral coefficients (MFCCs) features into images using different algorithms: Gramian Angular Difference Fields (GADF), Gramian Angular Summation Fields (GASF), Markov Transition Fields (MTF), Recurrence plots (RP), and RGB GAF. Then, these features are provided to different ML classifiers, such as Decision tree (DT), Random forest (RF), K nearest neighbors (KNN), and bagging. Using MFCCs, ZCR, and RMS as features achieved high performance, outperforming SOTA. Optimal parameters are found via the grid search method. Using 10-fold cross-validation, Our approach MFCCs-based RF classifier achieved an accuracy of 96.39%, outperforming State of the art Architecture of the scalogram-based shuffleNet classifier with an accuracy of 95.17%. The paper is <a href="" target=
 "_blank">Paper(will be added)</a>.
-
-
 ![Systemoveriew (1)](https://github.com/Hammoudmsh/Infant-Crying-Interpretation-based-on-Deep-Learning/assets/57059181/b539ea04-97da-4925-88cc-e005c0333663)
 **Research questions:**
 - 
@@ -45,14 +44,16 @@ python data_aug.py
 ```
 ### Transform audio into images and generate Mel-spectrogram
 ```
-python audio_mfcc_tsi
-python generateSpectrograms.py
 python features_extractor.py
 ```
 
 ### train
 ```
+<<<<<<< HEAD
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_mel_spectrogram
+=======
 nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram > mel_RF_SVC_KNN_DTC_Bagging.txt
+>>>>>>> 5005698 (First commit)
 ```
 # Results
 
