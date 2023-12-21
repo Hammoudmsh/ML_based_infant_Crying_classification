@@ -1,0 +1,76 @@
+
+
+
+
+
+nohup python train.py --FEATURE_NAME mfcc/ --DEBUG 0 --DATA_TYPE num --ALGORITHMS [RF,LR,Ridge,SVC,KNN,XGB,DTC,RF,NB,Bagging] --CV 10 > mfcc.txt
+nohup python train.py --FEATURE_NAME rms/  --DEBUG 0 --DATA_TYPE num --ALGORITHMS [RF,LR,Ridge,SVC,KNN,XGB,DTC,RF,NB,Bagging] --CV 10 > rms.txt
+nohup python train.py --FEATURE_NAME zcr/  --DEBUG 0 --DATA_TYPE num --ALGORITHMS [RF,LR,Ridge,SVC,KNN,XGB,TC,RF,NB,Bagging] --CV 10 > zcr.txt
+
+
+
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram > mel_RF_SVC_KNN_DTC_Bagging.txt
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90> GASF_RF_SVC_KNN_DTC_Bagging.txt
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90> GADF_RF_SVC_KNN_DTC_Bagging.txt
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RGB_GAF_dataset_20_90> RGB_GAF_RF_SVC_KNN_DTC_Bagging.txt
+
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90> MTF_RF_SVC_KNN_DTC_Bagging.txt
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90> RP_RF_SVC_KNN_DTC_Bagging.txt
+
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_MTF_dataset_20_90> GADF_MTF_RF_SVC_KNN_DTC_Bagging.txt
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_MTF_dataset_20_90> GASF_MTF_RP_RF_SVC_KNN_DTC_Bagging.txt
+
+
+
+
+
+
+
+
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Ridge] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [NB] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [KNN] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [SVC] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [DCT] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+REM python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram
+
+
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [LR] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Ridge] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [NB] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [KNN] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [SVC] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [DCT] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GASF_dataset_20_90
+
+
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [LR] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Ridge] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [NB] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [KNN] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [SVC] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [DCT] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_GADF_dataset_20_90
+
+
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [LR] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Ridge] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [NB] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [KNN] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [SVC] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [DCT] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_MTF_dataset_20_90
+
+
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [LR] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Ridge] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [NB] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [KNN] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [SVC] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [DCT] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90
+python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_RP_dataset_20_90

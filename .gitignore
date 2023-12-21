@@ -8,17 +8,6 @@ References/
 __pycache__/
 .ipynb_checkpoints/
 
-
-
-additional/
-Article/
-export/
-features/
-later/
-New folder/
-References/
-
-Article/
 *.bat
 *.zip
 *.sh

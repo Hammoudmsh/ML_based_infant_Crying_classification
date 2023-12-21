@@ -47,11 +47,12 @@ python data_aug.py
 ```
 python audio_mfcc_tsi
 python generateSpectrograms.py
+python features_extractor.py
 ```
 
 ### train
 ```
-python train.py --dataset data/aug_GADF_280_dataset/ --epochs 500 --lr 0.0001 --file2read 0 --es 1 --batch_size 16 --output output_id --experiment_tag output_tag
+nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram > mel_RF_SVC_KNN_DTC_Bagging.txt
 ```
 # Results
 
