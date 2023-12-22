@@ -47,11 +47,7 @@ python features_extractor.py
 
 ### train
 ```
-<<<<<<< HEAD
-python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mfcc_mel_spectrogram
-=======
 nohup python train.py --FEATURE_NAME mfcc/  --ALGORITHMS [RF,SVC,KNN,DTC,Bagging] --DEBUG 0 --CV 10 --DATA_TYPE images --METHOD mel_spectrogram > mel_RF_SVC_KNN_DTC_Bagging.txt
->>>>>>> 5005698 (First commit)
 ```
 # Results
 
